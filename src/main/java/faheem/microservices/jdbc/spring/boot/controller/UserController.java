@@ -1,6 +1,7 @@
 package faheem.microservices.jdbc.spring.boot.controller;
 
 import faheem.microservices.jdbc.spring.boot.repository.UserRepository;
+import faheem.microservices.jdbc.spring.boot.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
     @GetMapping ("/check")
     public String check(){
@@ -25,7 +26,7 @@ public class UserController {
     @GetMapping("/usernames")
     public List<String> getAllUserNames(){
         log.info("getAllUserNames() in controller method is called...");
-        return userRepository.getAllUserNames();
+        return userService.getAllUsernames();
     }
 
 }
