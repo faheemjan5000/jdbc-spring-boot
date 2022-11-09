@@ -24,7 +24,7 @@ public class UserController {
 
     @GetMapping("/usernames")
     public List<String> getAllUserNames(){
-        log.info("getAllUserNames() method is called...");
+        log.info("getAllUserNames() in controller method is called...");
         return userRepository.getAllUserNames();
     }
 

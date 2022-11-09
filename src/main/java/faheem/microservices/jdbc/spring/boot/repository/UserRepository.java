@@ -16,7 +16,7 @@ public class UserRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<String> getAllUserNames() {
-        log.info("getAllUserNames() method is called...");
+        log.info("getAllUserNames() in repository method is called...");
 
         String queryForUserNames = "select username from user";
 
